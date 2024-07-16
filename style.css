@@ -87,3 +87,19 @@ a {
   text-decoration: none;
   color: black;
 }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  background-color: #ccc;
+}
+
+footer #socialMedia {
+  margin-top: 25px;
+}
+
+footer #footerMenu {
+  margin-top: 10px;
+  text-align: center;
+}
