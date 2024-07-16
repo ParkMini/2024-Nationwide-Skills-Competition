@@ -1,4 +1,89 @@
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  padding-top: 64px;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+header > ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header > ul img {
+  width: 150px;
+}
+
+#mainNav {
+  padding-top: 20px;
+  width: 600px;
+}
+
+#mainNav > ul {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+#loginNav ul {
+  padding-top: 20px;
+  display: flex;
+}
+
+#loginNav ul li {
+  width: 70px;
+}
+
+#mainNav > ul > li > ul {
+  padding-top: 5px;
+  display: none;
+}
+
+#mainNav ul li:hover .mainNavTitle {
+  background-color: gray;
+  color: white;
+}
+
+#mainNav > ul:hover li ul {
+  display: block;
+  animation: fadein 0.3s linear;
+  background: white;
+}
+
+#mainNav ul li ul li {
+  padding: 5px 10px;
+}
+
+#mainNav ul li ul li a:hover {
+  color: #ccc;
+  background-color: gray;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
