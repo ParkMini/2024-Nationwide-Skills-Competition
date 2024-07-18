@@ -224,46 +224,31 @@ body::after {
   transform: scale(4) translateX(185px) translateY(180px);
 }
 
-#hotspot #신라대종:checked ~ #img:hover #신라대종설명 {
-  display: block;
-}
-
 #hotspot #대릉원돌담길:checked ~ #img img {
   transform: scale(4) translateX(140px) translateY(100px);
-}
-
-#hotspot #대릉원돌담길:checked ~ #img:hover #대릉원돌담길설명 {
-  display: block;
 }
 
 #hotspot #첨성대:checked ~ #img img {
   transform: scale(4) translateX(70px) translateY(20px);
 }
 
-#hotspot #첨성대:checked ~ #img:hover #첨성대설명 {
-  display: block;
-}
-
 #hotspot #경주계림:checked ~ #img img {
   transform: scale(4) translateX(60px) translateY(-60px);
-}
-
-#hotspot #경주계림:checked ~ #img:hover #경주계림설명 {
-  display: block;
 }
 
 #hotspot #월성:checked ~ #img img {
   transform: scale(4) translateX(-140px) translateY(-70px);
 }
 
-#hotspot #월성:checked ~ #img:hover #월성설명 {
-  display: block;
-}
-
 #hotspot #동궁과월지:checked ~ #img img {
   transform: scale(4) translateX(-160px) translateY(-20px);
 }
 
+#hotspot #신라대종:checked ~ #img:hover #신라대종설명,
+#hotspot #대릉원돌담길:checked ~ #img:hover #대릉원돌담길설명,
+#hotspot #첨성대:checked ~ #img:hover #첨성대설명,
+#hotspot #경주계림:checked ~ #img:hover #경주계림설명,
+#hotspot #월성:checked ~ #img:hover #월성설명,
 #hotspot #동궁과월지:checked ~ #img:hover #동궁과월지설명 {
   display: block;
 }
@@ -295,15 +280,9 @@ body::after {
   width: 600px;
 }
 
-#gyongju4season #봄:checked ~ #spring {
-  display: block;
-}
-#gyongju4season #여름:checked ~ #summer {
-  display: block;
-}
-#gyongju4season #가을:checked ~ #autumn {
-  display: block;
-}
+#gyongju4season #봄:checked ~ #spring,
+#gyongju4season #여름:checked ~ #summer,
+#gyongju4season #가을:checked ~ #autumn,
 #gyongju4season #겨울:checked ~ #winter {
   display: block;
 }
@@ -384,34 +363,13 @@ body::after {
   font-size: 24px;
 }
 
-#c1:checked ~ #cim1 {
-  display: flex;
-}
-
-#c2:checked ~ #cim2 {
-  display: flex;
-}
-
-#c3:checked ~ #cim3 {
-  display: flex;
-}
-
-#c4:checked ~ #cim4 {
-  display: flex;
-}
-
-#c5:checked ~ #cim5 {
-  display: flex;
-}
-
-#c6:checked ~ #cim6 {
-  display: flex;
-}
-
-#c7:checked ~ #cim7 {
-  display: flex;
-}
-
+#c1:checked ~ #cim1,
+#c2:checked ~ #cim2,
+#c3:checked ~ #cim3,
+#c4:checked ~ #cim4,
+#c5:checked ~ #cim5,
+#c6:checked ~ #cim6,
+#c7:checked ~ #cim7,
 #c8:checked ~ #cim8 {
   display: flex;
 }
