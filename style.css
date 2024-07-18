@@ -316,3 +316,111 @@ body::after {
 #gyongju4season #겨울:checked ~ #winter {
   display: block;
 }
+
+#cultureEvent {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cultureEvent img {
+  width: 300px;
+  height: 500px;
+}
+
+#cultureEvent label {
+  position: relative;
+  transition: ease-in-out 0.1s;
+}
+
+#content {
+  width: 71%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#cultureEvent #content img:hover {
+  transform: scale(1.2);
+}
+
+#cultureEvent #content img:hover p {
+  transform: scale(1.2);
+}
+
+#cultureEvent #content img:hover ~ p {
+  display: block;
+}
+
+#cultureEvent #content:hover img:not(img:hover) {
+  transform: scale(0.8);
+}
+
+#cultureEvent input {
+  display: none;
+}
+
+#cultureEvent p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  display: none;
+  font-weight: bold;
+}
+
+.imgModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.imgModal label {
+  font-size: 24px;
+}
+
+#c1:checked ~ #cim1 {
+  display: flex;
+}
+
+#c2:checked ~ #cim2 {
+  display: flex;
+}
+
+#c3:checked ~ #cim3 {
+  display: flex;
+}
+
+#c4:checked ~ #cim4 {
+  display: flex;
+}
+
+#c5:checked ~ #cim5 {
+  display: flex;
+}
+
+#c6:checked ~ #cim6 {
+  display: flex;
+}
+
+#c7:checked ~ #cim7 {
+  display: flex;
+}
+
+#c8:checked ~ #cim8 {
+  display: flex;
+}
