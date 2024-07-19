@@ -16,6 +16,15 @@ label {
   cursor: pointer;
 }
 
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 header {
   background-color: white;
   position: fixed;
@@ -455,4 +464,45 @@ body::after {
 #loginModal:target,
 #joinModal:target {
   display: flex;
+}
+
+#recommendTravelCourse input {
+  display: none;
+}
+
+#recommendTravelCourseLabels {
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+#recommendTravelCourseLabels label {
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 10px;
+}
+
+.recommendTravelCourseRecommend img {
+  margin: 10px 30px;
+  width: 25%;
+  vertical-align: middle;
+}
+
+.recommendTravelCourseRecommend span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.recommendTravelCourseRecommend {
+  margin-top: 20px;
+  text-align: center;
+  display: none;
+  animation: fadein 0.3s;
+}
+
+#동해안투어:checked ~ #동해안투어추천,
+#세계유산투어:checked ~ #세계유산투어추천,
+#신라역사투어:checked ~ #신라역사투어추천 {
+  display: block;
 }
