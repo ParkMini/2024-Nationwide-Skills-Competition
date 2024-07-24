@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Typing Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #game-container {
+            text-align: center;
+        }
+        #word-display, #success-words {
+            margin: 20px 0;
+        }
+        #timer {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        #input-area {
+            margin: 10px 0;
+        }
+        .highlight {
+            color: red;
+        }
+        .word-circle {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 20px auto;
+            list-style-type: none;
+            padding: 0;
+        }
+        .word-circle .letter {
+            position: absolute;
+            transform-origin: center;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="word-display"></div>
+        <div id="timer">60</div>
+        <div id="input-area">
+            <input type="text" id="word-input" disabled>
+            <button id="start-button">Start</button>
+        </div>
+        <div id="success-words"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        const words = [
+            "황리단길", "양동마을", "경주여행", "천년고도", "교촌마을",
+            "보문단지", "문무대왕", "황룡사지", "버드파크", "모전석탑",
+            "무열왕릉", "주상절리", "감은사지", "경주타워", "황성공원",
+            "운곡서원", "경주나정", "동궁월지", "문화도시", "경주벚꽃"
+        ];
+
+        let timer;
+        let timeLeft = 60;
+        let currentWords = [];
+        let successWords = [];
+        let wordIndex = 0;
+
+        const wordDisplay = $('#word-display');
+        const timerDisplay = $('#timer');
+        const wordInput = $('#word-input');
+        const startButton = $('#start-button');
+        const successWordsContainer = $('#success-words');
+
+        startButton.on('click', startGame);
+        wordInput.on('input', checkInput);
+
+        function startGame() {
+            startButton.text('Restart');
+            wordInput.prop('disabled', false);
+            wordInput.val('');
+            wordInput.focus();
+            resetGame();
+            selectWords();
+            displayWords();
+            startTimer();
+        }
+
+        function resetGame() {
+            clearInterval(timer);
+            timeLeft = 60;
+            timerDisplay.text(timeLeft);
+            successWords = [];
+            successWordsContainer.empty();
+            wordIndex = 0;
+        }
+
+        function selectWords() {
+            currentWords = [];
+            while (currentWords.length < 8) {
+                const randomWord = words[Math.floor(Math.random() * words.length)];
+                if (!currentWords.includes(randomWord)) {
+                    currentWords.push(randomWord);
+                }
+            }
+        }
+
+        function displayWords() {
+            wordDisplay.empty();
+            currentWords.forEach(word => {
+                const wordSpan = $('<span>').text(word);
+                wordDisplay.append(wordSpan).append(' ');
+            });
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                timerDisplay.text(timeLeft);
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    endGame();
+                }
+            }, 1000);
+        }
+
+        function checkInput() {
+            const inputText = wordInput.val().trim();
+            if (inputText === currentWords[wordIndex]) {
+                successWords.push(inputText);
+                updateSuccessWords();
+                wordInput.val('');
+                wordIndex++;
+                if (wordIndex === currentWords.length) {
+                    selectWords();
+                    displayWords();
+                    wordIndex = 0;
+                }
+            }
+        }
+
+        function updateSuccessWords() {
+            successWordsContainer.empty();
+            const ul = $('<ul>').addClass('word-circle');
+            const radius = 120;
+            successWords.forEach((word, wordIndex) => {
+                const letters = word.split('');
+                const angleIncrement = 360 / letters.length;
+                letters.forEach((letter, index) => {
+                    const li = $('<li>').addClass('letter').text(letter);
+                    const angle = angleIncrement * index;
+                    const rotationAngle = wordIndex % 2 === 0 ? -angle : angle;
+                    li.css('transform', `rotate(${angle}deg) translate(${radius}px) rotate(${rotationAngle}deg)`);
+                    ul.append(li);
+                });
+            });
+            successWordsContainer.append(ul);
+            animateCircle(ul, successWords.length % 2 === 0 ? 'clockwise' : 'counterclockwise');
+        }
+
+        function animateCircle(circle, direction) {
+            const rotationSpeed = 10000;
+            const currentRotation = direction === 'clockwise' ? 360 : -360;
+            circle.animate(
+                { rotation: currentRotation },
+                {
+                    step: function (now) {
+                        $(this).css('transform', `rotate(${now}deg)`);
+                    },
+                    duration: rotationSpeed,
+                    easing: 'linear',
+                    complete: function () {
+                        animateCircle($(this), direction);
+                    }
+                }
+            );
+        }
+
+        function endGame() {
+            wordInput.prop('disabled', true);
+            alert(`You typed ${successWords.length} words correctly!`);
+        }
+    </script>
+</body>
+</html>

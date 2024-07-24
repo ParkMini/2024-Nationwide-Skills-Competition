@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dense Dot Text on Canvas</title>
+  <style>
+    canvas { border: 1px solid white; background-color: black; }
+  </style>
+</head>
+<body>
+  <label for="nameInput">이름: </label>
+  <input type="text" id="nameInput" placeholder="이름을 입력하세요">
+  <label for="fontSelect">폰트 선택: </label>
+  <select id="fontSelect">
+    <option value='"궁서체"' selected>궁서체</option>
+    <option value='"돋움"'>돋움</option>
+    <option value='"바탕"'>바탕</option>
+    <option value='"맑은고딕"'>맑은고딕</option>
+    <option value='"굴림"'>굴림</option>
+  </select>
+  <canvas id="textCanvas" width="800" height="200"></canvas>
+
+  <script>
+    const canvas = document.getElementById('textCanvas');
+    const context = canvas.getContext('2d');
+    const nameInput = document.getElementById('nameInput');
+    const fontSelect = document.getElementById('fontSelect');
+    
+    let position = canvas.width, direction = -2;
+    let text = '', font = '100px "궁서체"';
+
+    const updateText = () => {
+      text = `천년고도 경주를 방문해주신 ${nameInput.value || '[입력글자]'} 님의 좋은 성적을 기원합니다.`;
+    };
+
+    const drawDotText = () => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.fillStyle = 'white';
+      context.font = font;
+      context.textBaseline = 'middle';
+      context.fillText(text, position, canvas.height / 2);
+
+      context.strokeStyle = 'white';
+      context.lineWidth = 2.5;
+      context.strokeText(text, position, canvas.height / 2);
+
+      const { data: pixels } = context.getImageData(0, 0, canvas.width, canvas.height);
+
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      for (let y = 0; y < canvas.height; y += 4) {
+        for (let x = 0; x < canvas.width; x += 4) {
+          if (pixels[(y * canvas.width + x) * 4] > 30) {
+            context.beginPath();
+            context.arc(x, y, 2, 0, Math.PI * 2);
+            context.fill();
+          }
+        }
+      }
+    };
+
+    const animate = () => {
+      position += direction;
+      const textWidth = context.measureText(text).width;
+      position = (position < -textWidth) ? canvas.width : (position > canvas.width) ? -textWidth : position;
+      drawDotText();
+      requestAnimationFrame(animate);
+    };
+
+    nameInput.addEventListener('input', () => { updateText(); drawDotText(); });
+    fontSelect.addEventListener('change', ({ target: { value } }) => { font = `100px ${value}`; drawDotText(); });
+
+    updateText();
+    animate();
+  </script>
+</body>
+</html>
