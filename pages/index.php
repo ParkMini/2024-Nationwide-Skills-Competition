@@ -13,7 +13,7 @@
     <ul id="nav">
       <!-- 로고 이미지 -->
       <li>
-        <img src="./assets/logo.png" alt="로고" title="로고" />
+        <img src="../assets/logo.png" alt="로고" title="로고" />
       </li>
       <!-- 주 메뉴 -->
       <li id="mainNav">
@@ -65,9 +65,9 @@
 
   <div id="slide">
     <div id="slider">
-      <img src="./assets/프레젠테이션1/슬라이드1.PNG" alt="슬라이드 이미지1" title="슬라이드 이미지1" />
-      <img src="./assets/프레젠테이션1/슬라이드2.PNG" alt="슬라이드 이미지2" title="슬라이드 이미지2" />
-      <img src="./assets/프레젠테이션1/슬라이드3.PNG" alt="슬라이드 이미지3" title="슬라이드 이미지3" />
+      <img src="../assets/프레젠테이션1/슬라이드1.PNG" alt="슬라이드 이미지1" title="슬라이드 이미지1" />
+      <img src="../assets/프레젠테이션1/슬라이드2.PNG" alt="슬라이드 이미지2" title="슬라이드 이미지2" />
+      <img src="../assets/프레젠테이션1/슬라이드3.PNG" alt="슬라이드 이미지3" title="슬라이드 이미지3" />
     </div>
     <div id="progressBar"></div>
   </div>
@@ -91,7 +91,7 @@
     </div>
     <br>
     <div id="img">
-      <img src="./A-Module-제공파일/제공파일/핫스팟/hotspot.png" alt="지도" title="지도" />
+      <img src="../A-Module-제공파일/제공파일/핫스팟/hotspot.png" alt="지도" title="지도" />
       <div id="신라대종설명" class="description">
         <h1>신라대종</h1>
         <p>
@@ -147,16 +147,16 @@
     <label for="가을">가을</label>
     <label for="겨울">겨울</label>
     <div id="spring" class="gyongju4seasonGallery">
-      <img src="./A-Module-제공파일/제공파일/경주사계/봄/경주시화개나리.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/경주사계/봄/경주시화개나리.jpg" alt="">
     </div>
     <div id="summer" class="gyongju4seasonGallery">
-      <img src="./A-Module-제공파일/제공파일/경주사계/여름/관성해수욕장.JPG" alt="">
+      <img src="../A-Module-제공파일/제공파일/경주사계/여름/관성해수욕장.JPG" alt="">
     </div>
     <div id="autumn" class="gyongju4seasonGallery">
-      <img src="./A-Module-제공파일/제공파일/경주사계/가을/경북산림환경연구원.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/경주사계/가을/경북산림환경연구원.jpg" alt="">
     </div>
     <div id="winter" class="gyongju4seasonGallery">
-      <img src="./A-Module-제공파일/제공파일/경주사계/겨울/경주읍성설경.JPG" alt="">
+      <img src="../A-Module-제공파일/제공파일/경주사계/겨울/경주읍성설경.JPG" alt="">
     </div>
   </div>
 
@@ -173,62 +173,62 @@
     <input type="radio" name="cultureEvent" id="c8">
 
     <div id="content">
-      <label for="c1"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주EDM페스티벌.jpeg" alt="">
+      <label for="c1"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주EDM페스티벌.jpeg" alt="">
         <p>경주EDM페스티벌</p>
       </label>
-      <label for="c2"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국악여행.jpg" alt="">
+      <label for="c2"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국악여행.jpg" alt="">
         <p>경주국악여행</p>
       </label>
-      <label for="c3"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국제뮤직페스티벌.png" alt="">
+      <label for="c3"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국제뮤직페스티벌.png" alt="">
         <p>경주국제뮤직페스티벌</p>
       </label>
-      <label for="c4"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주문화제야행.jpg" alt="">
+      <label for="c4"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주문화제야행.jpg" alt="">
         <p>경주문화제야행</p>
       </label>
-      <label for="c5"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주EDM페스티벌.jpeg" alt="">
+      <label for="c5"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주EDM페스티벌.jpeg" alt="">
         <p>경주EDM페스티벌</p>
       </label>
-      <label for="c6"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국악여행.jpg" alt="">
+      <label for="c6"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국악여행.jpg" alt="">
         <p>경주국악여행</p>
       </label>
-      <label for="c7"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국제뮤직페스티벌.png" alt="">
+      <label for="c7"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국제뮤직페스티벌.png" alt="">
         <p>경주국제뮤직페스티벌</p>
       </label>
-      <label for="c8"><img src="./A-Module-제공파일/제공파일/문화행사/2024 경주문화제야행.jpg" alt="">
+      <label for="c8"><img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주문화제야행.jpg" alt="">
         <p>경주문화제야행</p>
       </label>
     </div>
 
     <div id="cim1" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주EDM페스티벌.jpeg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주EDM페스티벌.jpeg" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim2" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국악여행.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국악여행.jpg" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim3" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국제뮤직페스티벌.png" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국제뮤직페스티벌.png" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim4" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주문화제야행.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주문화제야행.jpg" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim5" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주EDM페스티벌.jpeg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주EDM페스티벌.jpeg" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim6" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국악여행.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국악여행.jpg" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim7" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주국제뮤직페스티벌.png" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주국제뮤직페스티벌.png" alt="">
       <label for="c0">닫기</label>
     </div>
     <div id="cim8" class="imgModal">
-      <img src="./A-Module-제공파일/제공파일/문화행사/2024 경주문화제야행.jpg" alt="">
+      <img src="../A-Module-제공파일/제공파일/문화행사/2024%20경주문화제야행.jpg" alt="">
       <label for="c0">닫기</label>
     </div>
   </div>
@@ -324,26 +324,26 @@
     <div id="동해안투어추천" class="recommendTravelCourseRecommend">
       <div>
         <span>경주전통명주전시관</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/경주전통명주전시관.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/경주전통명주전시관.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/감은사지.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/감은사지.jpg" alt="">
         <span>감은사지</span>
       </div>
       <div>
         <span>문무대왕릉</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/문무대왕릉.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/문무대왕릉.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/양남주상절리.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/양남주상절리.jpg" alt="">
         <span>양남주상절리</span>
       </div>
       <div>
         <span>굴골사</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/굴골사.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/굴골사.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/동해안투어/괘릉.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/동해안투어/괘릉.jpg" alt="">
         <span>괘릉</span>
       </div>
     </div>
@@ -351,46 +351,46 @@
     <div id="세계유산투어추천" class="recommendTravelCourseRecommend">
       <div>
         <span>무열왕릉</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/세계유산투어/무열왕릉.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/세계유산투어/무열왕릉.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/세계유산투어/대릉원.png" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/세계유산투어/대릉원.png" alt="">
         <span>대릉원</span>
       </div>
       <div>
         <span>분황사</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/세계유산투어/분황사.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/세계유산투어/분황사.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/세계유산투어/석굴암.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/세계유산투어/석굴암.jpg" alt="">
         <span>석굴암</span>
       </div>
       <div>
         <span>불국사</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/세계유산투어/불국사.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/세계유산투어/불국사.jpg" alt="">
       </div>
     </div>
 
     <div id="신라역사투어추천" class="recommendTravelCourseRecommend">
       <div>
         <span>김유신장군묘</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/신라역사투어/김유신장군묘.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/신라역사투어/김유신장군묘.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/신라역사투어/국립경주박물관.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/신라역사투어/국립경주박물관.jpg" alt="">
         <span>국립경주박물관</span>
       </div>
       <div>
         <span>황룡사역사문화관</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/신라역사투어/황룡사역사문화관.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/신라역사투어/황룡사역사문화관.jpg" alt="">
       </div>
       <div>
-        <img src="./A-Module-제공파일/제공파일/여행코스/신라역사투어/불국사.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/신라역사투어/불국사.jpg" alt="">
         <span>불국사</span>
       </div>
       <div>
         <span>경주세계문화엑스포</span>
-        <img src="./A-Module-제공파일/제공파일/여행코스/신라역사투어/경주세계문화엑스포.jpg" alt="">
+        <img src="../A-Module-제공파일/제공파일/여행코스/신라역사투어/경주세계문화엑스포.jpg" alt="">
       </div>
     </div>
   </div>
@@ -491,7 +491,7 @@
 
 
   <footer>
-    <img src="./assets/logo.png" alt="로고" title="로고" style="filter: grayscale(1)" width="128px" />
+    <img src="../assets/logo.png" alt="로고" title="로고" style="filter: grayscale(1)" width="128px" />
     <div id="footerMenu">
       <p><a href="#">개인정보처리방침</a></p>
       <p><a href="#">저작권보호</a></p>
@@ -504,10 +504,10 @@
       Copyright 2024 Gyeongju Tourguide. All rights reserved.
     </p>
     <div id="socialMedia">
-      <img src="./A-Module-제공파일/제공파일/footer/SNS_01.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
-      <img src="./A-Module-제공파일/제공파일/footer/SNS_02.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
-      <img src="./A-Module-제공파일/제공파일/footer/SNS_03.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
-      <img src="./A-Module-제공파일/제공파일/footer/SNS_04.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
+      <img src="../A-Module-제공파일/제공파일/footer/SNS_01.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
+      <img src="../A-Module-제공파일/제공파일/footer/SNS_02.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
+      <img src="../A-Module-제공파일/제공파일/footer/SNS_03.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
+      <img src="../A-Module-제공파일/제공파일/footer/SNS_04.png" alt="소셜 미디어" title="소셜 미디어" width="30px" />
     </div>
   </footer>
 </body>
